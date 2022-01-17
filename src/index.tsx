@@ -84,7 +84,7 @@ export default function Swap(props: SwapProps): ReactElement {
   );
   return (
     <ThemeProvider theme={theme}>
-      <TokenListContextProvider tokenList={tokenList} provider={provider}>
+      <TokenListContextProvider tokenList={tokenList}>
         <TokenContextProvider provider={provider}>
           <DexContextProvider swapClient={swapClient}>
             <SwapContextProvider
@@ -95,7 +95,6 @@ export default function Swap(props: SwapProps): ReactElement {
               referral={referral}
             >
               <SwapCard
-                style={{display: 'flex}} 
                 containerStyle={containerStyle}
                 contentStyle={contentStyle}
                 swapTokenContainerStyle={swapTokenContainerStyle}
