@@ -4,7 +4,7 @@ import { TokenListContainer } from "@solana/spl-token-registry";
 import { Provider } from "@project-serum/anchor";
 import { Swap as SwapClient } from "@project-serum/swap";
 import {
-  createTheme,
+  createMuiTheme,
   ThemeOptions,
   ThemeProvider,
 } from "@material-ui/core/styles";
@@ -61,7 +61,7 @@ export default function Swap(props: SwapProps): ReactElement {
 
   // @ts-ignore
   const swapClient = new SwapClient(provider, tokenList);
-  const theme = createTheme(
+  const theme = createMuiTheme(
     materialTheme || {
       palette: {
         type:'dark',
@@ -95,6 +95,7 @@ export default function Swap(props: SwapProps): ReactElement {
               referral={referral}
             >
               <SwapCard
+                style={{display: 'flex}} 
                 containerStyle={containerStyle}
                 contentStyle={contentStyle}
                 swapTokenContainerStyle={swapTokenContainerStyle}
@@ -128,7 +129,7 @@ export type SwapProps = {
    * accounts for the token in which the referral is paid  (usually USDC
    * or USDT).
    */
-  referral?: 'BejS9yTooghA7jJfXZap3EVP52yQDSkekZW6kzFRwadt';
+  referral?: PublicKey;
 
   /**
    * The default `fromMint` to use when the component first renders.
@@ -150,7 +151,7 @@ export type SwapProps = {
    * The initial amount for the `toMint` to use when the component first
    * renders.
    */
-  toAmount?: any | null;
+  toAmount?: number;
 
   /**
    * Provide custom material-ui theme.

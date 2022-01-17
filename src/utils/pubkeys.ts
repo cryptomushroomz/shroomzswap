@@ -5,11 +5,11 @@ export const DEX_PID = new PublicKey(
 );
 
 export const SRM_MINT = new PublicKey(
-  "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+  "SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt"
 );
 
 export const USDC_MINT = new PublicKey(
-  "2vRgBSJEVPXxayrhXoazQyCKSGFYQG3ZdfT2Gv5gZykL"
+  "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 );
 
 export const USDT_MINT = new PublicKey(

@@ -242,19 +242,11 @@ export function SwapTokenForm({
         </Typography>
       </div>
       <TextField
-        type="text"
+        type="number"
         value={formattedAmount}
         onChange={(e) => setAmount(parseFloat(e.target.value))}
         InputProps={{
           disableUnderline: true,
-          placeholder: "0.00",
-          inputMode: "decimal",
-          // pattern : "^[0-9]*[.,]?[0-9]*$",
-          // minLenght : "1",
-          // maxlenght: "79",
-          autoComplete: "off",
-          autoCorrect: "off",
-          spellCheck: false,
           classes: {
             root: styles.amountInput,
             input: styles.input,
